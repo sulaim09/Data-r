@@ -1,1 +1,1 @@
-# cools
+#it has code of telent 
