@@ -1,0 +1,15 @@
+Effect of Permissions on Files
+
+Permission	Character	Meaning on File
+Read	-	The file is not readable. You cannot view the file contents.
+r	The file is readable.
+Write	-	The file cannot be changed or modified.
+w	The file can be changed or modified.
+Execute	-	The file cannot be executed.
+x	The file can be executed.
+s	If found in the user triplet, it sets the setuid bit. If found in the group triplet, it sets the setgid bit. It also means that x flag is set.
+When the setuid or setgid flags are set on an executable file, the file is executed with the file’s owner and/or group privileges.
+S	Same as s, but the x flag is not set. This flag is rarely used on files.
+t	If found in the others triplet, it sets the sticky bit.
+It also means that x flag is set. This flag is useless on files.
+T	Same as, t but the x flag is not set. This flag is useless on files.
