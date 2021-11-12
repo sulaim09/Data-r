@@ -1,0 +1,20 @@
+To locate the setuid, look for an ‘s’ instead of an ‘x’ in the executable bit of the file permissions.
+
+An example of an executable with setuid permission is passwd, as can be seen in the following output.
+
+ls -l /etc/passwd
+This returns the following output:
+
+-rwsr-xr-x root root 2447 Aug 29  2018 /etc/passwd
+As we can observe, the ‘x’ is replaced by an ‘s’ in the user section of the file permissions.
+
+To set the setuid bit, use the following command.
+
+chmod u+s 
+To remove the setuid bit, use the following command.
+
+chmod u-s 
+2. The setgid bit
+
+The setgid affects both files as well as directories. When used on a file, it executes with the privileges of the group of the user who owns it instead of executing with those of the group of the user who executed it.
+When the bit is set for a directory, the set of files in that directory will have the same group as the group of the parent directory, and not that of the user who created those files. This is used for file sharing since they can be now modified by all the users who are part of the group of the parent directory.
